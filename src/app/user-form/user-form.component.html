@@ -1,0 +1,22 @@
+<h3 [style.color]="isHighLight? 'red': 'black'">Your name is Định</h3>
+<div [class]="isHighLight?'circle':'square'"></div>
+<p>..............</p>
+<div [class.circle]="isHighLight" [class.square]="!isHighLight"></div>
+
+<!-- Đây là sử dụng style theo kiểu mặc định -->
+<p style="color: red">123</p> 
+<!-- Thuộc tính color của style nhận giá trị là 'red' -->
+<p [style.color]="'red'">123</p>
+<!-- Thuộc tính color của style nhận giá trị là biến redColor được khai báo ở file ts -->
+<p [style.color]="redColor">123</p>
+<!-- Thuộc tính color của style nhận giá trị tùy thuộc vào điều kiện -->
+<p [style.color]="false?'blue':'yellow'">123</p>
+
+<!-- Đây là sử dụng class theo kiểu mặc định, class blueColor được định nghĩa ở file css -->
+<h2 class='blueColor'>123456789</h2>
+<!-- Thuộc tính class nhận giá trị là biến redColor được định nghĩa ở file css -->
+<h2 [class]='"redColor"'>123456789</h2>
+<!-- Thuộc tính class tùy theo điều kiện -->
+<div [class]="true?'redColor':'blueColor'">123456789</div>
+<!-- Đây cũng là một cách đặt class theo điều kiện -->
+<div [class.redColor]="false" [class.blueColor]="true">123456789</div>
